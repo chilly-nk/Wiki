@@ -5,14 +5,15 @@ import markdown
 
 
 def index(request):
+    entries = util.list_entries()
     return render(request, "encyclopedia/index.html", {
-        "entries": util.list_entries()
+        "entries": entries,
     })
 
 def entry(request, title):
     contents_raw = util.get_entry(title)
     if contents_raw == None:
-        contents_raw = f"#Error: '{title}' not found\n\n From Wiki, chilly-nk's encyclopedia.\n\n Wiki does not have an article with this exact name. Please visit [Home](/wiki) to see all available articles."
+        contents_raw = f"#Error: '{title.capitalize()}' not found\n\n From Wiki, chilly-nk's encyclopedia.\n\n Wiki does not have an article with this exact name. Please visit [Home](/wiki) to see all available articles."
         contents = contents = markdown.markdown(contents_raw)
     else:
         contents = markdown.markdown(contents_raw)
