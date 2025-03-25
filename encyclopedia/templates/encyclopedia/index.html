@@ -10,6 +10,7 @@
     <ul>
         {% for entry in entries %}
              <li><a href= {% url 'encyclopedia:entry' entry %}>{{entry}}</a></li>
+             <!-- In the tag, encyclopedia is the namespace (see app_name='encyclopedia' in urls.py), and encyclopedia:entry specifies the url name (name='entry' in urls.py), while second entry is the parameter which is passed to the url -->
         {% endfor %}
     </ul>
 
