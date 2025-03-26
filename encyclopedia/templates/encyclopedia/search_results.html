@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <h1>Search Results</h1>
+    <p>{{ message }}</p>
+    <ul>
+        {% for match in partial_match %}
+             <li><a href= {% url 'encyclopedia:entry' match %}>{{match}}</a></li>
+             <!-- In the tag, encyclopedia is the namespace (see app_name='encyclopedia' in urls.py), and encyclopedia:entry specifies the url name (name='entry' in urls.py), while second entry is the parameter which is passed to the url -->
+        {% endfor %}
+    </ul>
+
+{% endblock %}
