@@ -13,7 +13,7 @@ h1 {
 }
 
 textarea {
-    height: 90vh;
+    height: 80vh;
     width: 80%;
 }
 
@@ -36,3 +36,31 @@ textarea {
 .sidebar h2 {
     margin-top: 5px;
 }
+
+#title-input {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.errorbox {
+    background-color: #ffe5e5; /* Light red background */
+    color: #b00020; /* Dark red text */
+    border: 1px solid #b00020; /* Dark red border */
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 80%;
+  }
+  
+  /* .errorbox::before {
+    content: "⚠️";
+    font-size: 18px;
+  } */
+
+
+  
